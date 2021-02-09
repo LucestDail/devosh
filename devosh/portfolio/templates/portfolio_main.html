@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>portfolio_main.html</title>
-</head>
-<body>
-portfolio_main.html
-</body>
-</html>
+{% extends 'portfolio_master.html' %}
+{% block content %}
+<h3>포트폴리오 메인</h3>
+<table class = "table">
+    <tr>
+        <th>title</th>
+        <th>introduction</th>
+        <th>img</th>
+    </tr>
+{% for list in portlist %}
+    <tr>
+        <td>{{list.title}}<a/></td>
+        <td>{{list.introduction}}<a/></td>
+        <td><img src="/media/{{list.titleimg}}" alt="" height="400"></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

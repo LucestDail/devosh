@@ -7,8 +7,8 @@
     </tr>
 {% for list in postlist %}
     <tr>
-        <td>{{list.title}}</td>
-        <td>{{list.topic}}</td>
+        <td><a href="/blog/{{list.pk}}/">{{list.title}}<a/></td>
+        <td><a href="/blog/{{list.pk}}/">{{list.topic}}<a/></td>
     </tr>
 {% endfor %}
 </table>

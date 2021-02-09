@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from main.views import main_index
-from blog.views import blog_main, blog_post, blog_post_category
+from blog.views import blog_main, blog_post, blog_post_category, blog_post_view
 from portfolio.views import portfolio_main
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     #admin
@@ -30,6 +33,9 @@ urlpatterns = [
     path('blog/', blog_main, name='blog_main'),
     path('blog/post/', blog_post, name='blog_post'),
     path('blog/post/<category>/', blog_post_category, name='blog_post_category'),
+    path('blog/<int:pk>/', blog_post_view, name='blog_post_view'),
     #portfolio
     path('portfolio/', portfolio_main, name='portfolio_main')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
