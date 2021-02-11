@@ -76,7 +76,7 @@ $(window).ready(function() {
     var imax2 = typeing2.length;
 
     //setInterval을 이용해 반복적으로 출력 
-    var inter = setInterval(typi,150);
+    var inter = setInterval(typi,50);
     var inter2;
 
 
