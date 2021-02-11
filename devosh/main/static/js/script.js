@@ -49,7 +49,7 @@ $(window).ready(function() {
 
 //타이핑할 문장
     var result1  = "노력하는 개발자,";
-    var result2  = "오승현 입니다.";
+    var result2  = "오승현 입니다 :)";
     var typeing1=[], typeing2=[];;
     result1 = result1.split(''); // 한글자씩자름
     result2 = result2.split(''); // 한글자씩자름
