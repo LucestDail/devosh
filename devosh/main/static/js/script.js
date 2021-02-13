@@ -103,7 +103,7 @@ $(window).ready(function() {
           setTimeout(function(){             
              resultDiv2.classList.add("cursor");
              setTimeout(function(){
-                inter2 = setInterval(typi2,150);
+                inter2 = setInterval(typi2,50);
              },400);
            },300);
          },400);
